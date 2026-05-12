@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAHWARA AEROMEDIQ | Next-Gen Logistics</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+</head>
+<body class="loading">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">
+            <span>INITIALIZING</span>
+            <span>AEROSPACE</span>
+            <span>LOGISTICS</span>
+        </div>
+        <div class="loading-bar"><div class="loading-progress"></div></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" data-magnetic-container>
+        <div class="nav-logo" data-magnetic>
+            <span class="logo-mark">SA</span>
+            <div class="logo-text">SAHWARA<br><span>AEROMEDIQ</span></div>
+        </div>
+        <div class="nav-links">
+            <a href="#mission" class="nav-link" data-magnetic>Mission</a>
+            <a href="#network" class="nav-link" data-magnetic>Network</a>
+            <a href="#technology" class="nav-link" data-magnetic>Technology</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-glow" data-magnetic onclick="toggleModal()">
+                <span>REQUEST DISPATCH</span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+            
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero-bg">
+                    <img src="assets/drone_hero.png" alt="Medical drone flying" class="parallax-bg" data-speed="0.5">
+                    <div class="hero-overlay"></div>
+                    <div class="noise-overlay"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <div class="hero-badge reveal-up">
+                        <div class="status-dot"></div>
+                        <span>SYSTEM ACTIVE / KZN AIRSPACE</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <div class="line-wrap"><span class="reveal-text">BEYOND</span></div>
+                        <div class="line-wrap"><span class="reveal-text highlight">THE ROAD.</span></div>
+                    </h1>
+                    <p class="hero-subtitle reveal-up delay-1">
+                        Deploying autonomous aerial logistics to deliver life-saving medical supplies across Sub-Saharan Africa. Any terrain. Zero delays.
+                    </p>
+                    <div class="scroll-indicator reveal-up delay-2">
+                        <div class="mouse">
+                            <div class="wheel"></div>
+                        </div>
+                        <span>SCROLL TO DESCEND</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats / Impact Bento Box -->
+            <section class="impact" id="mission">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="split-text">REDEFINING<br>ACCESS.</h2>
+                        <p class="fade-text">Where infrastructure fails, precision engineering takes over. We bridge the critical last mile.</p>
+                    </div>
+                    
+                    <div class="bento-grid">
+                        <!-- Bento Item 1: Large Image -->
+                        <div class="bento-item bento-large group">
+                            <div class="bento-bg">
+                                <img src="assets/drone_impact.png" alt="Drone Delivery Impact" class="bento-img scale-on-hover">
+                            </div>
+                            <div class="bento-content glass-panel">
+                                <h3>CRITICAL DELIVERY</h3>
+                                <p>Dropping blood and anti-venom exactly where it's needed.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Bento Item 2: Stat -->
+                        <div class="bento-item glass-card glow-border">
+                            <div class="stat-content">
+                                <div class="stat-value" data-target="12">0</div>
+                                <div class="stat-unit">MINS</div>
+                            </div>
+                            <div class="stat-label">Average Response Time vs 4hrs by 4x4</div>
+                        </div>
+                        
+                        <!-- Bento Item 3: Stat -->
+                        <div class="bento-item glass-card glow-border">
+                            <div class="stat-content">
+                                <div class="stat-value" data-target="100">0</div>
+                                <div class="stat-unit">%</div>
+                            </div>
+                            <div class="stat-label">Terrain Independence</div>
+                        </div>
+
+                        <!-- Bento Item 4: CTA -->
+                        <div class="bento-item glass-card action-card" data-magnetic-container>
+                            <h3>BECOME A PARTNER</h3>
+                            <p>Integrate your healthcare facility into our drone network.</p>
+                            <button class="btn-outline" data-magnetic>JOIN NETWORK ↗</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology / Network -->
+            <section class="network" id="network">
+                <div class="grid-overlay"></div>
+                <div class="container">
+                    <div class="network-layout">
+                        <div class="network-text">
+                            <h2 class="split-text">COMMAND &<br>CONTROL</h2>
+                            <p class="fade-text">Proprietary routing algorithms ensure our fleet navigates around severe weather, restricted airspace, and topographical hazards autonomously.</p>
+                            <ul class="tech-list">
+                                <li class="fade-up-item">
+                                    <div class="tech-icon">🛰️</div>
+                                    <div>
+                                        <h4>Live Telemetry</h4>
+                                        <p>Sub-second latency tracking over Starlink/4G mesh.</p>
+                                    </div>
+                                </li>
+                                <li class="fade-up-item">
+                                    <div class="tech-icon">❄️</div>
+                                    <div>
+                                        <h4>Cold-Chain Intact</h4>
+                                        <p>Smart payloads maintain exact temperatures for vaccines.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="network-visual">
+                            <div class="radar-container">
+                                <div class="radar"></div>
+                                <div class="blip" style="top: 30%; left: 40%"></div>
+                                <div class="blip" style="top: 60%; left: 70%"></div>
+                                <div class="blip" style="top: 20%; left: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="cyber-footer">
+                <div class="container">
+                    <div class="footer-top">
+                        <h2 class="footer-title">READY FOR<br>DISPATCH?</h2>
+                        <button class="btn-glow large" data-magnetic onclick="toggleModal()">
+                            <span>INITIATE MISSION</span>
+                        </button>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="footer-brand">SAHWARA AEROMEDIQ NPC © 2026</div>
+                        <div class="footer-links">
+                            <a href="#" class="hover-line">Legal</a>
+                            <a href="#" class="hover-line">Privacy</a>
+                            <a href="#" class="hover-line">System Status</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- Modal Dispatch System -->
+    <div class="dispatch-modal" id="dispatchModal">
+        <div class="modal-bg" onclick="toggleModal()"></div>
+        <div class="modal-content glass-card">
+            <button class="modal-close" onclick="toggleModal()" data-magnetic>×</button>
+            <div class="modal-header">
+                <h3>EMERGENCY DISPATCH</h3>
+                <div class="pulse-line"></div>
+            </div>
+            <form class="cyber-form">
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Facility Registration Code</label>
+                </div>
+                <div class="input-group">
+                    <select required>
+                        <option value="" disabled selected></option>
+                        <option>Blood (O-)</option>
+                        <option>Anti-Venom</option>
+                        <option>Vaccines</option>
+                    </select>
+                    <label class="select-label">Payload Type</label>
+                </div>
+                <button type="submit" class="btn-glow full-width" data-magnetic>
+                    <span>TRANSMIT COORDINATES</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="animations.js"></script>
+</body>
+</html>
